@@ -1,3 +1,3 @@
-import spacy
+import spacy # type: ignore
 nlp = spacy.load("en_core_web_sm")
 print("Model loaded successfully!")

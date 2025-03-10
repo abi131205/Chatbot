@@ -1,6 +1,6 @@
 import joblib
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+from chatterbot import ChatBot # type: ignore
+from chatterbot.trainers import ListTrainer # type: ignore
 
 # Load trained model
 model = joblib.load("disease_prediction_model.pkl")

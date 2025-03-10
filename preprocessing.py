@@ -1,9 +1,9 @@
-import pandas as pd
-import nltk
+import pandas as pd # type: ignore
+import nltk # type: ignore
 import string
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from textblob import TextBlob
+from nltk.corpus import stopwords # type: ignore
+from nltk.tokenize import word_tokenize # type: ignore
+from textblob import TextBlob # type: ignore
 
 # Download necessary NLTK resources
 nltk.download('stopwords')

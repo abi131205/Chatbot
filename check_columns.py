@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd # type: ignore
 
 # Load the dataset
 file_path = "medical_chatbot_dataset.csv"

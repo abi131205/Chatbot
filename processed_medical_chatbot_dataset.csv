@@ -4,3 +4,9 @@ Patient_ID,Symptoms,Possible_Diagnosis,Recommended_Actions,Doctor_Notes
 3,chest pain shortness breath,Heart attack or anxiety,"Seek emergency medical help, take aspirin if safe","Rule out cardiac conditions, consider ECG"
 4,abdominal pain vomiting diarrhoea,Gastroenteritis or food poisoning,"Stay hydrated, avoid solid food, consult a doctor if persistent","Monitor hydration levels, check for food allergies"
 5,fatigue joint pain skin rash,Autoimmune disorder or allergic reaction,Consult a rheumatologist or dermatologist for further evaluation,Check for recent infections or autoimmune markers
+Patient_ID,Symptoms,Possible_Diagnosis,Recommended_Actions,Doctor_Notes
+1,fever cough sore throat,Flu or common cold,"Rest, drink fluids, take fever reducers","Monitor symptoms, if difficulty breathing occurs, visit ER"
+2,headache nausea dizziness,Migraine or food poisoning,"Rest in a dark room, drink water, avoid strong smells","Avoid caffeine, keep a symptom diary for patterns"
+3,chest pain shortness breath,Heart attack or anxiety,"Seek emergency medical help, take aspirin if safe","Rule out cardiac conditions, consider ECG"
+4,abdominal pain vomiting diarrhoea,Gastroenteritis or food poisoning,"Stay hydrated, avoid solid food, consult a doctor if persistent","Monitor hydration levels, check for food allergies"
+5,fatigue joint pain skin rash,Autoimmune disorder or allergic reaction,Consult a rheumatologist or dermatologist for further evaluation,Check for recent infections or autoimmune markers
