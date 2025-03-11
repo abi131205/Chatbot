@@ -1,2 +1,1 @@
 # Chatbot
-Medical Diagnosis

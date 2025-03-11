@@ -1,0 +1,6 @@
+Patient_ID,Symptoms,Possible_Diagnosis,Recommended_Actions,Doctor_Notes
+1,"Fever, cough, sore throat",Flu or common cold,"Rest, drink fluids, take fever reducers","Monitor symptoms, if difficulty breathing occurs, visit ER"
+2,"Headache, nausea, dizziness",Migraine or food poisoning,"Rest in a dark room, drink water, avoid strong smells","Avoid caffeine, keep a symptom diary for patterns"
+3,"Chest pain, shortness of breath",Heart attack or anxiety,"Seek emergency medical help, take aspirin if safe","Rule out cardiac conditions, consider ECG"
+4,"Abdominal pain, vomiting, diarrhea",Gastroenteritis or food poisoning,"Stay hydrated, avoid solid food, consult a doctor if persistent","Monitor hydration levels, check for food allergies"
+5,"Fatigue, joint pain, skin rash",Autoimmune disorder or allergic reaction,Consult a rheumatologist or dermatologist for further evaluation,Check for recent infections or autoimmune markers
