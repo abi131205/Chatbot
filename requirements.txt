@@ -13,6 +13,7 @@ scikit-learn==1.6.1
 scipy==1.15.2
 threadpoolctl==3.5.0
 Werkzeug==3.1.3
+<<<<<<< HEAD
 blinker==1.9.0
 click==8.1.8
 colorama==0.4.6
@@ -28,3 +29,9 @@ scikit-learn==1.6.1
 scipy==1.15.2
 threadpoolctl==3.5.0
 Werkzeug==3.1.3
+=======
+tensorflow
+pandas
+nltk
+gunicorn
+>>>>>>> e299b9c (Updated files for Render deployment)
