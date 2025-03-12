@@ -1,5 +1,5 @@
-import pandas as pd
-import tensorflow as tf
+import pandas as pd # type: ignore
+import tensorflow as tf # type: ignore
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import LSTM, Dense, Embedding, Bidirectional # type: ignore
 from tensorflow.keras.preprocessing.text import Tokenizer # type: ignore
