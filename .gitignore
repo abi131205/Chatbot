@@ -1,4 +1,7 @@
 venv/
 *.pyd
 *.dll
+*.exe
 *.so
+__pycache__/
+*.pyc
