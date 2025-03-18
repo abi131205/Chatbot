@@ -1,11 +1,22 @@
 import os
 from flask import Flask, request, jsonify
 import joblib
+from dotenv import load_dotenv
 
 # Load model
 model = joblib.load("disease_prediction_model.pkl")
 
+# Load environment variables
+load_dotenv()
+
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return f"API Key: {os.getenv('API_KEY', 'No API Key')}"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
 
 @app.route('/')
 def home():
