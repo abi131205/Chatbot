@@ -1,6 +1,8 @@
-# Ignore virtual environment
+# Ignore virtual environments
 venv/
 venv_chatterbot/
+
+# Ignore compiled files
 *.pyd
 *.dll
 *.exe
@@ -8,3 +10,9 @@ venv_chatterbot/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Ensure important files are included
+!requirements.txt
+!Procfile
+!app.py
+!chatbot/  # Replace with your actual project folder name
