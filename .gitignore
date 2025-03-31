@@ -16,3 +16,4 @@ __pycache__/
 !Procfile
 !app.py
 !chatbot/  # Replace with your actual project folder name
+node_modules

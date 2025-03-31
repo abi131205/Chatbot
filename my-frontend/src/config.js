@@ -1,0 +1,1 @@
+axios.post('https://ai-chatie.onrender.com/predict', { symptoms });
