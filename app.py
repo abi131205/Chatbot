@@ -1,9 +1,9 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import os
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend communication
+CORS(app)
 
 # Dummy chatbot responses
 def chatbot_response(message):
@@ -18,8 +18,6 @@ def chatbot_response(message):
 # Dummy disease prediction based on symptoms
 def predict_disease(symptoms):
     symptom_set = set(symptoms)
-
-    # Simple rule-based condition matching
     if "fever" in symptom_set and "cough" in symptom_set:
         return {"disease": "Flu or common cold"}
     elif "headache" in symptom_set and "nausea" in symptom_set:
@@ -29,36 +27,26 @@ def predict_disease(symptoms):
     else:
         return {"disease": "No specific match found. Please consult a doctor."}
 
-# ✅ Root route (For API testing)
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "API is running!"})
 
-# ✅ Chatbot API (Handles general chat)
 @app.route("/chat", methods=["POST"])
 def chat():
     data = request.get_json()
     user_message = data.get("message", "").strip()
-
     if not user_message:
         return jsonify({"error": "Empty message"}), 400
+    return jsonify({"reply": chatbot_response(user_message)})
 
-    bot_reply = chatbot_response(user_message)
-    return jsonify({"reply": bot_reply})
-
-# ✅ Disease prediction API
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json()
     symptoms = data.get("symptoms", [])
-
     if not symptoms:
         return jsonify({"error": "No symptoms provided"}), 400
+    return jsonify(predict_disease(symptoms))
 
-    prediction = predict_disease(symptoms)
-    return jsonify(prediction)
-
-# ✅ Run app (supports both local + Render)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
