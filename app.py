@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend communication
@@ -17,7 +18,7 @@ def chatbot_response(message):
 # Dummy disease prediction based on symptoms
 def predict_disease(symptoms):
     symptom_set = set(symptoms)
-    
+
     # Simple rule-based condition matching
     if "fever" in symptom_set and "cough" in symptom_set:
         return {"disease": "Flu or common cold"}
@@ -57,5 +58,7 @@ def predict():
     prediction = predict_disease(symptoms)
     return jsonify(prediction)
 
+# ✅ Run app (supports both local + Render)
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
