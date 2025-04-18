@@ -6,86 +6,66 @@ nlu:
     - hey
     - hello
     - hi
-    - hello there
     - good morning
     - good evening
-    - moin
-    - hey there
-    - let's go
+    - hello there
     - hey dude
-    - goodmorning
-    - goodevening
     - good afternoon
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
     - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
+    - bye
     - see you later
+    - good night
+    - bye bye
+    - cu
 
 - intent: affirm
   examples: |
     - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
+    - yeah
     - correct
+    - of course
+    - definitely
+    - sure
 
 - intent: deny
   examples: |
     - no
-    - n
-    - never
+    - nope
     - I don't think so
-    - don't like that
-    - no way
+    - nah
     - not really
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
+    - I'm feeling great
     - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - I feel wonderful
+    - awesome
+    - super happy
+    - I’m doing fantastic
 
 - intent: mood_unhappy
   examples: |
+    - I'm feeling bad
+    - I'm sad
+    - I feel terrible
     - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - I'm not okay
+    - I’m sick
 
 - intent: bot_challenge
   examples: |
     - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - are you human?
+    - am I talking to a real person?
+
+- intent: inform_symptom
+  examples: |
+    - I have a fever
+    - I'm feeling sick
+    - I caught a cold
+    - I have a headache
+    - I feel unwell

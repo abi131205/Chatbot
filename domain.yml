@@ -1,34 +1,22 @@
-version: "3.1"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "Hello! I can help you understand your symptoms. Please tell me what you're experiencing."
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Take care! Hope you feel better soon."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_symptom_fever:
+    - text: "Fever often indicates an infection. Drink fluids, rest, and monitor your temperature. Paracetamol can help — but consult a doctor if it persists."
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_symptom_cough:
+    - text: "Coughing could be due to cold, flu, or even COVID. Drink warm fluids and see a doctor if it gets worse."
+
+  utter_symptom_headache:
+    - text: "Headaches can result from stress, dehydration, or illness. Try rest and hydration. If it's severe or recurring, consult a doctor."
+
+  utter_symptom_throat:
+    - text: "A sore throat may be from a viral infection or irritation. Warm liquids, salt water gargles, and lozenges may help."
+
+  utter_general_medical_response:
+    - text: "That's a good question. For accurate guidance, it's best to speak with a healthcare professional. But I can give general advice if you'd like."
+

@@ -1,4 +1,3 @@
-
 # 🤖 Chatbot Application
 
 A complete chatbot system built with:
@@ -6,29 +5,17 @@ A complete chatbot system built with:
 - 🧠 **Rasa** for NLP and intent classification  
 - 💬 **React** for the frontend user interface  
 - 🗃️ **SQLite** for storing conversations  
-- ⚙️ **Flask** or **FastAPI** (`app.py`) for backend API bridging  
+- ⚙️ **Flask** (`app.py`) for backend API bridging  
 
 ---
 
 ## 📁 Project Structure
 
-```
-Chatbot/
-├── .rasa/                 # Rasa configuration
-├── .venv/                 # Python virtual environment
-├── .vscode/               # VS Code editor settings
-├── actions/               # Custom Rasa actions
-├── archive/               # Archived/deprecated utilities
-├── data/                  # Training data: NLU, stories, rules
-├── models/                # Trained Rasa models
-├── my-backend/            # Rasa backend project
-├── my-frontend/           # React frontend
-├── tests/                 # Unit tests (optional)
-├── app.py                 # Flask/FastAPI middleware API
-├── db.sqlite3             # SQLite database
-├── .env.example.txt       # Sample environment variables
-└── README.md              # This file
-```
+Chatbot/ ├── .rasa/ # Rasa configuration ├── .venv/ # Python virtual environment (local) ├── .vscode/ # VS Code editor settings ├── actions/ # Custom Rasa actions ├── archive/ # Deprecated utilities/scripts ├── data/ # NLU, stories, rules ├── models/ # Trained Rasa models ├── my-backend/ # Rasa backend ├── my-frontend/ # React frontend ├── tests/ # Unit tests ├── app.py # Flask middleware API ├── db.sqlite3 # SQLite database ├── .env.example.txt # Sample environment variables └── README.md # This file
+
+yaml
+Copy
+Edit
 
 ---
 
@@ -40,115 +27,121 @@ Chatbot/
 cd my-backend/
 pip install -r requirements.txt
 
-# Train the chatbot model
+# Train the chatbot
 rasa train
 
-# Start custom actions (in a separate terminal)
+# Start custom actions (in a new terminal)
 rasa run actions
 
 # Start Rasa server with API enabled
 rasa run --enable-api
-```
-
----
-
-### 2️⃣ Frontend (React)
-
-```bash
+2️⃣ Frontend (React)
+bash
+Copy
+Edit
 cd ../my-frontend/
 npm install
 npm start
-```
+Now open 👉 http://localhost:3000 in your browser.
 
-Then open 👉 [http://localhost:3000](http://localhost:3000) in your browser.
+3️⃣ Bridge API Server (Flask)
+This Flask server connects the React frontend with Rasa backend:
 
----
-
-### 3️⃣ Bridge API Server (`app.py`)
-
-This is the Flask or FastAPI server acting as a bridge between frontend and backend.
-
-```bash
+bash
+Copy
+Edit
 # From the root directory
 python app.py
-```
+You should see this JSON response in Postman or browser:
 
-Expected response in browser or Postman:
-
-```json
+json
+Copy
+Edit
 {
   "message": "API is running!"
 }
-```
+🔐 Environment Setup
+Create a .env file (if needed) from the example file:
 
----
-
-## 🔐 Environment Setup
-
-Create a `.env` file in `my-backend/` or root as needed:
-
-```ini
+bash
+Copy
+Edit
+cp .env.example.txt .env
+Inside .env:
+ini
+Copy
+Edit
 API_KEY=your_api_key_here
 DATABASE_URL=sqlite:///db.sqlite3
-```
+The python-dotenv package loads these automatically in app.py.
 
-You may use `python-dotenv` or similar tools to load environment variables into `app.py`.
+📦 Archived Scripts (Reference Only)
+Found in /archive folder:
 
----
+auto_fix_rasa.py
 
-## 📦 Archived Scripts (For Reference Only)
+check_columns.py
 
-Located in the `/archive` folder:
+clean_requirements.py
 
-- `auto_fix_rasa.py`
-- `check_columns.py`
-- `clean_requirements.py`
-- `fix_rasa_conflicts.py`
-- `database.sqlite3` (deprecated)
+fix_rasa_conflicts.py
 
-Not actively used but preserved for version tracking.
+database.sqlite3 (deprecated)
 
----
+These are not actively used, but saved for debugging/version control.
 
-## 🧪 Testing
-
-To test Rasa directly:
-
-```bash
+🧪 Testing
+Test Rasa:
+bash
+Copy
+Edit
 rasa shell
-```
-
-To test React frontend (if configured):
-
-```bash
+Test React frontend:
+bash
+Copy
+Edit
 npm test
-```
+🛠️ Tech Stack
+Backend:
 
----
+Rasa
 
-## 🛠️ Tech Stack
+Flask
 
-### Backend:
-- `rasa`
-- `flask` or `fastapi`
-- `sqlalchemy`
-- `python-dotenv`
+SQLAlchemy
 
-### Frontend:
-- `react`
-- `axios`
-- `tailwindcss` *(optional)*
-- `react-icons`
+python-dotenv
 
----
+Frontend:
 
-## 📄 License
+React
 
-MIT License  
+Axios
+
+TailwindCSS (optional)
+
+react-icons
+
+🤝 Contributing
+Pull requests are welcome!
+For major changes, open an issue first to discuss what you’d like to change.
+
+📄 License
+MIT License
 Free to use for personal and commercial projects.
 
+✨ Author
+Built with ❤️ by @abi131205
+
+yaml
+Copy
+Edit
+
 ---
 
-## ✨ Author
+Would you like me to:
+- Push this cleaned-up version to your GitHub via PR?
+- Move to the **next missing file**: `SECURITY.md`?
+- Or help with something else like tests or model explanation?
 
-Built with ❤️ by [@abi131205](https://github.com/abi131205)
+Just say the word.

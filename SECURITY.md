@@ -1,21 +1,35 @@
-# Security Policy
+# 🔐 Security Policy
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This project is under active development. We currently support only the latest version.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Latest  | ✅                 |
+| < Latest| ❌                 |
 
-## Reporting a Vulnerability
+---
 
-Use this section to tell people how to report a vulnerability.
+## 📢 Reporting a Vulnerability
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+If you find a **security vulnerability** or issue in this project:
+
+- **Please DO NOT** open a public issue.
+- Instead, **email the maintainer directly** at:
+
+📧 **abi131205@gmail.com**
+
+Include the following in your message:
+- Clear description of the issue
+- Steps to reproduce (if possible)
+- Any screenshots or logs
+- Suggestions (optional)
+
+We’ll respond as soon as possible (within a few days) and handle the issue privately and respectfully.
+
+---
+
+## 🙏 Thanks
+
+Thank you for helping make this project safer for everyone! 💙

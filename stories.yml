@@ -1,33 +1,12 @@
 version: "3.1"
 
 stories:
-- story: Happy path
+- story: greeting
   steps:
-  - intent: mood_great
-  - action: utter_happy  # Consistent with rules
+  - intent: greet
+  - action: utter_greet
 
-- story: Unhappy path
-  steps:
-  - intent: mood_unhappy
-  - action: utter_cheer_up  # No conflicts now
-  - action: utter_mood_unhappy
-
-- story: User denies something
-  steps:
-  - intent: deny
-  - action: utter_deny
-
-- story: User affirms something
-  steps:
-  - intent: affirm
-  - action: utter_affirm
-
-- story: User challenges the bot
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot  # Matches rules.yml now
-
-- story: User says goodbye
+- story: goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
@@ -35,35 +14,30 @@ stories:
 - story: happy path
   steps:
   - intent: mood_great
-  - action: utter_mood_great  # Changed from utter_happy to match the rule
-
-- story: sad path 1
-  steps:
-  - intent: mood_unhappy
-  - action: utter_mood_unhappy  # Changed from utter_cheer_up to match the rule
-
-- story: Bot Identity
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- rule: Handle happy mood
-  steps:
-  - intent: happy
   - action: utter_mood_great
 
-  - rule: Respond to bot challenge
+- story: sad path
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_mood_unhappy
+
+- story: affirmation
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: denial
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: bot identity check
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
 
-  - story: happy path
+- story: symptom reporting
   steps:
-  - intent: happy
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: sad
-  - action: utter_cheer_up
-
+  - intent: inform_symptom
+  - action: utter_inform_symptom
