@@ -1,4 +1,4 @@
-# Ignore virtual environments
+# Ignore virtual environments 
 venv/
 venv_chatterbot/
 
@@ -11,9 +11,23 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# Ignore environment and config files
+.env
+
+# Ignore Rasa and Chatbot caches
+Chatbot/__pycache__/
+Chatbot/actions/__pycache__/
+Chatbot/.rasa/cache/
+Chatbot/models/
+
+# Ignore frontend build and deployment config
+my-frontend/.vercel/
+
+# Node dependencies
+node_modules/
+
 # Ensure important files are included
 !requirements.txt
 !Procfile
 !app.py
 !chatbot/  # Replace with your actual project folder name
-node_modules
