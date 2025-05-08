@@ -27,7 +27,7 @@ Chatbot/
 ├── db.sqlite3           # SQLite database
 ├── .env.example.txt     # Sample environment variables
 └── README.md            # This file
-🚀 Getting Started
+ 🚀 Getting Started
 1️⃣ Backend (Rasa)
 bash
 Copy
@@ -148,7 +148,7 @@ Edit
 
 ---
 
-### **SECURITY.md**
+### **`SECURITY.md`**:
 
 ```markdown
 # 🔐 Security Policy
