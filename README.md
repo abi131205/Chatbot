@@ -11,19 +11,27 @@ A complete chatbot system built with:
 
 ## 📁 Project Structure
 
-Chatbot/ ├── .rasa/ # Rasa configuration ├── .venv/ # Python virtual environment (local) ├── .vscode/ # VS Code editor settings ├── actions/ # Custom Rasa actions ├── archive/ # Deprecated utilities/scripts ├── data/ # NLU, stories, rules ├── models/ # Trained Rasa models ├── my-backend/ # Rasa backend ├── my-frontend/ # React frontend ├── tests/ # Unit tests ├── app.py # Flask middleware API ├── db.sqlite3 # SQLite database ├── .env.example.txt # Sample environment variables └── README.md # This file
-
-yaml
+```plaintext
+Chatbot/
+├── .rasa/               # Rasa configuration
+├── .venv/               # Python virtual environment (local)
+├── .vscode/             # VS Code editor settings
+├── actions/             # Custom Rasa actions
+├── archive/             # Deprecated utilities/scripts
+├── data/                # NLU, stories, rules
+├── models/              # Trained Rasa models
+├── my-backend/          # Rasa backend
+├── my-frontend/         # React frontend
+├── tests/               # Unit tests
+├── app.py               # Flask middleware API
+├── db.sqlite3           # SQLite database
+├── .env.example.txt     # Sample environment variables
+└── README.md            # This file
+🚀 Getting Started
+1️⃣ Backend (Rasa)
+bash
 Copy
 Edit
-
----
-
-## 🚀 Getting Started
-
-### 1️⃣ Backend (Rasa)
-
-```bash
 cd my-backend/
 pip install -r requirements.txt
 
@@ -68,6 +76,7 @@ Copy
 Edit
 cp .env.example.txt .env
 Inside .env:
+
 ini
 Copy
 Edit
@@ -76,7 +85,7 @@ DATABASE_URL=sqlite:///db.sqlite3
 The python-dotenv package loads these automatically in app.py.
 
 📦 Archived Scripts (Reference Only)
-Found in /archive folder:
+Found in the /archive folder:
 
 auto_fix_rasa.py
 
@@ -88,22 +97,23 @@ fix_rasa_conflicts.py
 
 database.sqlite3 (deprecated)
 
-These are not actively used, but saved for debugging/version control.
+These are not actively used but saved for debugging/version control.
 
 🧪 Testing
 Test Rasa:
+
 bash
 Copy
 Edit
 rasa shell
 Test React frontend:
+
 bash
 Copy
 Edit
 npm test
 🛠️ Tech Stack
 Backend:
-
 Rasa
 
 Flask
@@ -113,7 +123,6 @@ SQLAlchemy
 python-dotenv
 
 Frontend:
-
 React
 
 Axios
@@ -139,9 +148,41 @@ Edit
 
 ---
 
-Would you like me to:
-- Push this cleaned-up version to your GitHub via PR?
-- Move to the **next missing file**: `SECURITY.md`?
-- Or help with something else like tests or model explanation?
+### **SECURITY.md**
 
-Just say the word.
+```markdown
+# 🔐 Security Policy
+
+## Supported Versions
+
+This project is under active development. We currently support only the latest version.
+
+| Version  | Supported |
+| -------- | --------- |
+| Latest   | ✅        |
+| < Latest | ❌        |
+
+---
+
+## 📢 Reporting a Vulnerability
+
+If you find a **security vulnerability** or issue in this project:
+
+- **Please DO NOT** open a public issue.
+- Instead, **email the maintainer directly** at:
+
+📧 **abi131205 [at] gmail [dot] com**
+
+Include the following in your message:
+- Clear description of the issue
+- Steps to reproduce (if possible)
+- Any screenshots or logs
+- Suggestions (optional)
+
+We’ll respond as soon as possible (within a few days) and handle the issue privately and respectfully.
+
+---
+
+## 🙏 Thanks
+
+Thank you for helping make this project safer for everyone! 💙
