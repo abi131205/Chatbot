@@ -1,146 +1,52 @@
-# 🤖 Chatbot Application
+# 🩺 AI Medical Diagnosis Chatbot
 
-A complete chatbot system built with:
-
-- 🧠 **Rasa** for NLP and intent classification  
-- 💬 **React** for the frontend user interface  
-- 🗃️ **SQLite** for storing conversations  
-- ⚙️ **Flask** (`app.py`) for backend API bridging  
+An AI-powered medical diagnosis chatbot built using Rasa, machine learning, and a custom frontend. The chatbot allows users to enter symptoms and receive predictions for possible diseases along with advice and precautions.
 
 ---
 
-## 📁 Project Structure
+## 📌 Project Overview
 
-```plaintext
+This chatbot helps users understand potential medical conditions based on their symptoms. It uses a trained ML model to predict diseases and leverages Rasa's natural language processing capabilities to handle user conversations. The backend stores interactions, and a simple frontend allows user-friendly input.
+
+---
+
+## 🎯 Features
+
+- 🤖 Conversational AI built with Rasa
+- 🧠 Disease prediction based on symptoms using a trained ML model
+- 💊 Provides description, precautions, and medicines
+- 📚 Trained on a labeled medical dataset
+- 🗃️ SQLite database integration for logging interactions
+- 💻 Basic frontend interface (GUI/Web)
+- 📦 Docker support for easy deployment
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer         | Tools / Frameworks                        |
+|--------------|--------------------------------------------|
+| Frontend     | Python GUI (Tkinter or Web Interface)     |
+| Backend      | Python, SQLite                            |
+| Chatbot      | Rasa (NLU + Core), Custom Actions         |
+| ML Model     | Scikit-learn, TensorFlow (model.h5 / .pkl)|
+| Deployment   | Docker                                    |
+
+---
+
+## 📂 Project Structure
+
 Chatbot/
-├── .rasa/               # Rasa configuration
-├── .venv/               # Python virtual environment (local)
-├── .vscode/             # VS Code editor settings
-├── actions/             # Custom Rasa actions
-├── archive/             # Deprecated utilities/scripts
-├── data/                # NLU, stories, rules
-├── models/              # Trained Rasa models
-├── my-backend/          # Rasa backend
-├── my-frontend/         # React frontend
-├── tests/               # Unit tests
-├── app.py               # Flask middleware API
-├── db.sqlite3           # SQLite database
-├── .env.example.txt     # Sample environment variables
-└── README.md            # This file
- 🚀 Getting Started
-1️⃣ Backend (Rasa)
-bash
-Copy
-Edit
-cd my-backend/
-pip install -r requirements.txt
-
-# Train the chatbot
-rasa train
-
-# Start custom actions (in a new terminal)
-rasa run actions
-
-# Start Rasa server with API enabled
-rasa run --enable-api
-2️⃣ Frontend (React)
-bash
-Copy
-Edit
-cd ../my-frontend/
-npm install
-npm start
-Now open 👉 http://localhost:3000 in your browser.
-
-3️⃣ Bridge API Server (Flask)
-This Flask server connects the React frontend with Rasa backend:
-
-bash
-Copy
-Edit
-# From the root directory
-python app.py
-You should see this JSON response in Postman or browser:
-
-json
-Copy
-Edit
-{
-  "message": "API is running!"
-}
-🔐 Environment Setup
-Create a .env file (if needed) from the example file:
-
-bash
-Copy
-Edit
-cp .env.example.txt .env
-Inside .env:
-
-ini
-Copy
-Edit
-API_KEY=your_api_key_here
-DATABASE_URL=sqlite:///db.sqlite3
-The python-dotenv package loads these automatically in app.py.
-
-📦 Archived Scripts (Reference Only)
-Found in the /archive folder:
-
-auto_fix_rasa.py
-
-check_columns.py
-
-clean_requirements.py
-
-fix_rasa_conflicts.py
-
-database.sqlite3 (deprecated)
-
-These are not actively used but saved for debugging/version control.
-
-🧪 Testing
-Test Rasa:
-
-bash
-Copy
-Edit
-rasa shell
-Test React frontend:
-
-bash
-Copy
-Edit
-npm test
-🛠️ Tech Stack
-Backend:
-Rasa
-
-Flask
-
-SQLAlchemy
-
-python-dotenv
-
-Frontend:
-React
-
-Axios
-
-TailwindCSS (optional)
-
-react-icons
-
-🤝 Contributing
-Pull requests are welcome!
-For major changes, open an issue first to discuss what you’d like to change.
-
-📄 License
-MIT License
-Free to use for personal and commercial projects.
-
-✨ Author
-Built with ❤️ by @abi131205
+├── actions/ # Custom actions (Python logic)
+├── data/ # NLU training data, stories, rules
+├── models/ # Trained Rasa model
+├── my-backend/ # Backend logic and DB
+├── my-frontend/ # GUI/Web interface
+├── domain.yml # Intents, responses, entities
+├── config.yml # Rasa config
+├── Dockerfile # Deployment
+├── medical_chatbot_dataset.csv # Dataset used for model training
+└── README.md # This file
 
 yaml
 Copy
@@ -148,41 +54,88 @@ Edit
 
 ---
 
-### **`SECURITY.md`**:
+## 🚀 How to Run the Project
 
-```markdown
-# 🔐 Security Policy
+### 🧪 Prerequisites
 
-## Supported Versions
+- Python 3.8+
+- Rasa: `pip install rasa`
+- Docker (optional)
+- Other dependencies (use `requirements.txt` if included)
 
-This project is under active development. We currently support only the latest version.
+### ⚙️ Steps
 
-| Version  | Supported |
-| -------- | --------- |
-| Latest   | ✅        |
-| < Latest | ❌        |
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/abi131205/Chatbot
+   cd Chatbot
+Train the Rasa model:
+
+bash
+Copy
+Edit
+rasa train
+Run the actions server:
+
+bash
+Copy
+Edit
+rasa run actions
+Start the chatbot:
+
+bash
+Copy
+Edit
+rasa shell
+(Optional) Run the GUI or frontend in my-frontend/:
+
+bash
+Copy
+Edit
+python chatbot_gui.py
+(Optional) Build Docker container:
+
+bash
+Copy
+Edit
+docker build -t medical-chatbot .
+docker run -p 5005:5005 medical-chatbot
+🧠 Sample Interaction
+vbnet
+Copy
+Edit
+User: Hi
+Bot: Hello! Please describe your symptoms.
+User: I have a headache and fever
+Bot: Based on your symptoms, you may have: Migraine
+Bot: Suggested medicines: Paracetamol
+Bot: Precautions: Stay hydrated and rest well.
+📈 Future Enhancements
+Voice assistant integration
+
+Multilingual support
+
+REST API for mobile app use
+
+Improved web UI with React/Flask
+
+Feedback and user rating system
+
+📚 Dataset Source
+The chatbot is trained on a custom CSV medical dataset mapping symptoms to diseases.
+
+If the dataset is externally sourced, please credit here.
+
+👨‍💻 Author
+Abishek S – GitHub Profile
+
+📜 License
+This project is for educational purposes. If you plan to deploy publicly, ensure proper data privacy and medical disclaimer compliance.
+
+yaml
+Copy
+Edit
 
 ---
 
-## 📢 Reporting a Vulnerability
-
-If you find a **security vulnerability** or issue in this project:
-
-- **Please DO NOT** open a public issue.
-- Instead, **email the maintainer directly** at:
-
-📧 **abi131205 [at] gmail [dot] com**
-
-Include the following in your message:
-- Clear description of the issue
-- Steps to reproduce (if possible)
-- Any screenshots or logs
-- Suggestions (optional)
-
-We’ll respond as soon as possible (within a few days) and handle the issue privately and respectfully.
-
----
-
-## 🙏 Thanks
-
-Thank you for helping make this project safer for everyone! 💙
+Would you like me to create and commit this `README.md` to your GitHub repo via a PR or just send it as a downloadable file?
