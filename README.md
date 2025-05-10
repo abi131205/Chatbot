@@ -127,7 +127,7 @@ The chatbot is trained on a custom CSV medical dataset mapping symptoms to disea
 If the dataset is externally sourced, please credit here.
 
 👨‍💻 Author
-Abishek S – GitHub Profile
+Abijith U K – GitHub Profile
 
 📜 License
 This project is for educational purposes. If you plan to deploy publicly, ensure proper data privacy and medical disclaimer compliance.
